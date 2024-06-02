@@ -46,7 +46,7 @@ const SignUp = () => {
             otherStyles="mb-8"
           />
         </View>
-        <View className="justify-end min-h-[20vh] w-full px-6">
+        <View className="justify-endvh] w-full px-6">
           <PrimaryButton
             title="Create Account"
             size="large"
