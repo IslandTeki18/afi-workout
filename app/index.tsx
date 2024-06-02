@@ -1,15 +1,25 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import { StatusBar } from 'expo-status-bar'
-import { Link } from 'expo-router'
+import { View, Text, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import { PrimaryButton } from '@/components'
+import { StatusBar } from 'expo-status-bar';
+import { Redirect, router } from 'expo-router';
 
 const App = () => {
     return (
-        <View className="flex-1 items-center justify-center bg-white">
-            <Text className="text-3xl font-normal">AFI WORKOUT</Text>
-            <StatusBar style="auto" />
-            <Link href="/home" style={{ color: 'blue' }}>Go to Home</Link>
-        </View>
+        <SafeAreaView className="bg-accent h-full">
+            <ScrollView contentContainerStyle={{ height: "100%" }}>
+                <View className="items-center justify-center gap-2 min-h-[80vh] px-6">
+                    <Text className=" text-xxlTitle font-semibold">AFI WORKOUT</Text>
+                    <FontAwesome6 name="dumbbell" size={48} color="#000" />
+                </View>
+                <View className="items-center justify-center gap-2 min-h-[5vh] px-6">
+                    <PrimaryButton title="Get Started" size='large' handlePress={() => router.push("/sign-in")} />
+                </View>
+            </ScrollView>
+            <StatusBar backgroundColor='#ffffff' style="dark" />
+        </SafeAreaView>
     )
 }
 

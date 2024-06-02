@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react'
-import { SplashScreen, Stack } from "expo-router"
-import { useFonts } from 'expo-font'
+import React, { useEffect } from "react";
+import { SplashScreen, Stack } from "expo-router";
+import { useFonts } from "expo-font";
 
-SplashScreen.preventAutoHideAsync()
+SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
-    'Roboto': require('../assets/fonts/Roboto-Regular.ttf'),
+    Roboto: require("../assets/fonts/Roboto-Regular.ttf"),
 
     "Roboto-Bold": require("../assets/fonts/Roboto-Bold.ttf"),
     "Roboto-Italic": require("../assets/fonts/Roboto-Italic.ttf"),
@@ -23,21 +23,24 @@ const RootLayout = () => {
 
     "Roboto-Black": require("../assets/fonts/Roboto-Black.ttf"),
     "Roboto-BlackItalic": require("../assets/fonts/Roboto-BlackItalic.ttf"),
-  })
+  });
 
   useEffect(() => {
     if (error) throw error;
 
-    if (fontsLoaded) SplashScreen.hideAsync()
-  }, [fontsLoaded, error])
+    if (fontsLoaded) SplashScreen.hideAsync();
+  }, [fontsLoaded, error]);
 
   if (!fontsLoaded && !error) return null;
 
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      {/* <Stack.Screen name="/workout/[workout]" options={{ headerShown: false }} /> */}
     </Stack>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;

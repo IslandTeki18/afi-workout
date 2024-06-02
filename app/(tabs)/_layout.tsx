@@ -7,7 +7,7 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 const TabIcon = ({ name, focused }: { name: string, focused: boolean }) => {
   return (
     <View>
-      <FontAwesome6 name={name} color={focused ? '#E43E3E' : '#5F5F5F'} size={20} solid />
+      <FontAwesome6 name={name} color={focused ? '#E43E3E' : '#ffffff'} size={24} solid />
     </View>
   )
 }
@@ -17,6 +17,10 @@ const TabsLayout = () => {
     <>
       <Tabs screenOptions={{
         tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: '#5F5F5F',
+          borderTopColor: '#fff',
+        }
       }}>
         <Tabs.Screen name="home" options={{
           title: "Home",
