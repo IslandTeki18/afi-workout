@@ -1,14 +1,47 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, Text, View, ImageSourcePropType } from 'react-native'
 import React from 'react'
+import { Tabs, Redirect } from 'expo-router'
+import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 
-const _layout = () => {
+
+const TabIcon = ({ name, focused }: { name: string, focused: boolean }) => {
   return (
     <View>
-      <Text>_layout</Text>
+      <FontAwesome6 name={name} color={focused ? '#E43E3E' : '#5F5F5F'} size={20} solid />
     </View>
   )
 }
 
-export default _layout
+const TabsLayout = () => {
+  return (
+    <>
+      <Tabs screenOptions={{
+        tabBarShowLabel: false,
+      }}>
+        <Tabs.Screen name="home" options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ color = '', focused = false }) => (
+            <TabIcon name="house" focused={focused} />
+          )
+        }} />
+        <Tabs.Screen name="workout" options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ color = '', focused = false }) => (
+            <TabIcon name="dumbbell" focused={focused} />
+          )
+        }} />
+        <Tabs.Screen name="profile" options={{
+          title: "Home",
+          headerShown: false,
+          tabBarIcon: ({ color = '', focused = false }) => (
+            <TabIcon name="user" focused={focused} />
+          )
+        }} />
+      </Tabs>
+    </>
+  )
+}
 
-const styles = StyleSheet.create({})
+export default TabsLayout

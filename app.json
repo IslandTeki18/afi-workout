@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Workout Buddy",
-    "slug": "workout-buddy",
+    "name": "Afi Workout",
+    "slug": "afi-workout",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "workoutbuddy",
+    "scheme": "afiworkout",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
