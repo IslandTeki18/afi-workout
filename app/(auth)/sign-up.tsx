@@ -63,7 +63,7 @@ const SignUp = () => {
             otherStyles="mb-8 mt-10"
           />
           <Input
-            placeholder="First name..."
+            placeholder="Last name..."
             handleChangeText={(e) => setForm({ ...form, lastName: e })}
             value={form.lastName}
             otherStyles="mb-8"

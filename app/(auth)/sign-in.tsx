@@ -21,20 +21,21 @@ const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   async function signInWIthEmail() {
-    setIsLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({
-      email: form.email,
-      password: form.password,
-    });
+    // setIsLoading(true);
+    // const { error } = await supabase.auth.signInWithPassword({
+    //   email: form.email,
+    //   password: form.password,
+    // });
 
-    if (error) {
-      Alert.alert(error.message);
-      setIsLoading(false);
-      return;
-    } else {
-      setIsLoading(false);
-      router.push("/home");
-    }
+    // if (error) {
+    //   Alert.alert(error.message);
+    //   setIsLoading(false);
+    //   return;
+    // } else {
+    //   setIsLoading(false);
+    //   router.push("/home");
+    // }
+    router.push("/home");
   }
 
   return (
