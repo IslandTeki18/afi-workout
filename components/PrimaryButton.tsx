@@ -5,6 +5,7 @@ type PrimaryButtonProps = {
     title: string
     size?: 'small' | 'medium' | 'large'
     handlePress: () => void
+    disabled?: boolean
 }
 
 export const PrimaryButton = (props: PrimaryButtonProps) => {
@@ -23,7 +24,7 @@ export const PrimaryButton = (props: PrimaryButtonProps) => {
 
     }
     return (
-        <TouchableOpacity className={`bg-primary w-full items-center ${handleSize()} rounded-lg`} onPress={props.handlePress}>
+        <TouchableOpacity disabled={props.disabled} className={`bg-primary disabled:bg-primary/60 w-full items-center ${handleSize()} rounded-lg`} onPress={props.handlePress}>
             <Text className="text-mdTitle font-semibold" style={{ color: "#ffffff" }}>{props.title}</Text>
         </TouchableOpacity>
     )
