@@ -25,7 +25,13 @@ export const Select = (props: SelectProps) => {
           onPress={() => setShowDropdown((prev) => !prev)}
           className="w-full py-2"
         >
-          <Text>{selectedItem ? selectedItem.title : props.placeholder}</Text>
+          <Text
+            className={`${
+              selectedItem ? "text-black" : "text-secondary"
+            } font-normal text-mdTitle`}
+          >
+            {selectedItem ? selectedItem.title : props.placeholder}
+          </Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => setShowDropdown((prev) => !prev)}>
           <FontAwesome6 name="chevron-down" size={18} color="#000" />

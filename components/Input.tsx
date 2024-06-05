@@ -20,9 +20,9 @@ type InputProps = {
 export const Input = (props: InputProps) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <View className={`space-y-2 ${props.otherStyles}`}>
-      {props.label && <Text className="text-mdTitle">{props.label}</Text>}
-      <View className="w-full h-16 px-6 border border-secondary rounded-lg focus:border-primary items-center flex-row">
+    <View className={`${props.otherStyles}`}>
+      {props.label && <Text className="text-mdTitle pb-2">{props.label}</Text>}
+      <View className="h-16 px-6 border border-secondary rounded-lg focus:border-primary items-center flex-row">
         <TextInput
           className="flex-1 text-black font-normal text-mdTitle"
           placeholder={props.placeholder}

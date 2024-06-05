@@ -2,6 +2,7 @@ import { Text, View, ScrollView, Image } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { PrimaryButton, RecentWorkoutCard } from "@/components";
+import { router } from "expo-router";
 
 const Home = () => {
   return (
@@ -21,8 +22,8 @@ const Home = () => {
         </View>
         <View className="items-center min-h-[10vh] px-6">
           <PrimaryButton
-            title="Start New Workout"
-            handlePress={() => {}}
+            title="Pick a Workout"
+            handlePress={() => router.push("(workout)")}
             size="large"
           />
         </View>

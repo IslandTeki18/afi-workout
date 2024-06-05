@@ -1,7 +1,20 @@
-import { View, Text, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  FlatList,
+  VirtualizedList,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Input, PrimaryButton, SecondaryButton, Select } from "@/components";
+import {
+  Input,
+  PrimaryButton,
+  SecondaryButton,
+  Select,
+  ExerciseList,
+} from "@/components";
+import { router } from "expo-router";
 
 const fakeList = [
   { id: "1", title: "Item 1" },
@@ -15,7 +28,7 @@ const CreatePage = () => {
 
   return (
     <SafeAreaView className="h-full bg-white">
-      <View className="px-6 z-10">
+      <View className="px-6 z-10 pb-4">
         <Text className="text-lgTitle font-semibold mb-6">
           Create New Workout
         </Text>
@@ -34,12 +47,19 @@ const CreatePage = () => {
         <SecondaryButton
           title="Add Exercise"
           size="small"
-          handlePress={() => {}}
+          handlePress={() => router.push("/add-exercise")}
         />
       </View>
-      <ScrollView></ScrollView>
+      <View className="px-6 max-h-[40vh]">
+        <ExerciseList />
+      </View>
       <View className="px-6">
-        <PrimaryButton disabled title="Review Workout" size="large" handlePress={() => {}} />
+        <PrimaryButton
+          disabled
+          title="Review Workout"
+          size="large"
+          handlePress={() => {}}
+        />
       </View>
     </SafeAreaView>
   );

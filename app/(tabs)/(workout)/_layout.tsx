@@ -6,12 +6,40 @@ const WorkoutLayout = () => {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{ title: "Workouts", headerShown: false }}
+        options={{
+          title: "Workouts",
+          headerTitle: "",
+          headerBackTitle: "Back",
+        }}
       />
       <Stack.Screen
         name="create"
         options={{
           title: "Create Workout",
+          headerTitle: "",
+          headerBackTitle: "Back",
+        }}
+      />
+      <Stack.Screen
+        name="add-exercise"
+        options={{
+          title: "Add Exercise",
+          headerTitle: "",
+          headerBackTitle: "Back",
+        }}
+      />
+      <Stack.Screen
+        name="details/[id]"
+        options={{
+          title: "Exercise Details",
+          headerTitle: "",
+          headerBackTitle: "Back",
+        }}
+      />
+      <Stack.Screen
+        name="edit/exercise-edit"
+        options={{
+          title: "Edit Workout",
           headerTitle: "",
           headerBackTitle: "Back",
         }}
