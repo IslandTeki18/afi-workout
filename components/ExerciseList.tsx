@@ -40,7 +40,7 @@ export const ExerciseList = () => {
           onLongPress={drag}
           disabled={isActive}
           className="bg-secondary w-full p-6 rounded-lg mb-4 flex-row items-center justify-between"
-          onPress={() => router.push(`/details/${item.key}`)}
+          onPress={() => router.push(`/exercise-details/${item.key}`)}
         >
           <Text className="text-mdTitle font-medium" style={{ color: "#fff" }}>
             {item.name}

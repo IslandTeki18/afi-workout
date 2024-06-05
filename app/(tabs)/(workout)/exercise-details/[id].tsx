@@ -9,7 +9,7 @@ const ExerciseDetails = () => {
       <Text>Exercise Details {id}</Text>
       <Link
         href={{
-          pathname: "/edit/exercise-edit",
+          pathname: "/edit-exercise/exercise-edit",
           params: { id },
         }}
       >

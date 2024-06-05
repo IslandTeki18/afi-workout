@@ -13,7 +13,7 @@ const WorkoutLayout = () => {
         }}
       />
       <Stack.Screen
-        name="create"
+        name="create-workout"
         options={{
           title: "Create Workout",
           headerTitle: "",
@@ -29,7 +29,7 @@ const WorkoutLayout = () => {
         }}
       />
       <Stack.Screen
-        name="details/[id]"
+        name="exercise-details/[id]"
         options={{
           title: "Exercise Details",
           headerTitle: "",
@@ -37,7 +37,7 @@ const WorkoutLayout = () => {
         }}
       />
       <Stack.Screen
-        name="edit/exercise-edit"
+        name="edit-exercise/exercise-edit"
         options={{
           title: "Edit Workout",
           headerTitle: "",
