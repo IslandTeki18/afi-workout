@@ -31,6 +31,7 @@ export const Input = (props: InputProps) => {
           keyboardType={props.keyboardType || "default"}
           secureTextEntry={props.placeholder === "Password..." && !showPassword}
           placeholderTextColor={"#5F5F5F"}
+          
         />
         {props.placeholder === "Password..." && (
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>

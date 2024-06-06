@@ -6,10 +6,14 @@ import { router } from "expo-router";
 
 const WorkoutHome = () => {
   return (
-    <SafeAreaView className="h-full bg-white">
+    <View className="h-full bg-white">
       <ScrollView className="gap-2">
         <View className="justify-center items-center min-h-[15vh] px-6 ">
-          <PrimaryButton title="Create New Workout" size="large" handlePress={() => router.push("/create-workout")} />
+          <PrimaryButton
+            title="Create New Workout"
+            size="large"
+            handlePress={() => router.push("/create-workout")}
+          />
         </View>
         <View className="min-h-[10vh] px-6 pb-4">
           <Text className="text-mdTitle font-bold text-left mb-2">
@@ -18,7 +22,7 @@ const WorkoutHome = () => {
           <RecentWorkoutCard />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

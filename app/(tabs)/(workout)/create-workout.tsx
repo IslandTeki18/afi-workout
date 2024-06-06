@@ -1,12 +1,8 @@
 import {
   View,
   Text,
-  ScrollView,
-  FlatList,
-  VirtualizedList,
 } from "react-native";
 import React, { useState } from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
   Input,
   PrimaryButton,
@@ -27,7 +23,7 @@ const CreatePage = () => {
   const [workoutType, setWorkoutType] = useState<string>("");
 
   return (
-    <SafeAreaView className="h-full bg-white">
+    <View className="h-full bg-white">
       <View className="px-6 z-10 pb-4">
         <Text className="text-lgTitle font-semibold mb-6">
           Create New Workout
@@ -50,10 +46,10 @@ const CreatePage = () => {
           handlePress={() => router.push("/add-exercise")}
         />
       </View>
-      <View className="px-6 max-h-[40vh]">
+      <View className="px-6 max-h-[37vh]">
         <ExerciseList />
       </View>
-      <View className="px-6">
+      <View className="px-6 py-3">
         <PrimaryButton
           disabled
           title="Review Workout"
@@ -61,7 +57,7 @@ const CreatePage = () => {
           handlePress={() => {}}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

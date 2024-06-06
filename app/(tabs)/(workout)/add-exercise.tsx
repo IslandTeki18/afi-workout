@@ -5,15 +5,17 @@ import { Input, PrimaryButton } from "@/components";
 import Textarea from "@/components/Textarea";
 import { router } from "expo-router";
 
+type ExerciseForm = {
+  name: string;
+  sets: string;
+  reps: string;
+  duration: string;
+  rest: string;
+  notes: string;
+};
+
 const AddExercise = () => {
-  const [formObj, setFormObj] = useState({
-    name: "",
-    sets: "0",
-    reps: "0",
-    duration: "0",
-    rest: "0",
-    notes: "",
-  });
+  const [formObj, setFormObj] = useState<ExerciseForm>({} as ExerciseForm);
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -73,7 +75,7 @@ const AddExercise = () => {
       <View className="px-6 pb-4">
         <PrimaryButton
           title="Create Exercise"
-          handlePress={() => router.push("/create")}
+          handlePress={() => router.push("/create-workout")}
           size="large"
         />
       </View>
