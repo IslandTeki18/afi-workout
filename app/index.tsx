@@ -8,7 +8,7 @@ import { Redirect, router } from 'expo-router';
 
 const App = () => {
     return (
-        <SafeAreaView className="bg-accent h-full">
+        <SafeAreaView className="bg-white h-full">
             <ScrollView contentContainerStyle={{ height: "100%" }}>
                 <View className="items-center justify-center gap-2 min-h-[80vh] px-6">
                     <Text className=" text-xxlTitle font-semibold">AFI WORKOUT</Text>

@@ -43,6 +43,7 @@ const WorkoutLayout = () => {
           headerTitle: "",
           headerBackTitle: "Back",
         }}
+        
       />
     </Stack>
   );

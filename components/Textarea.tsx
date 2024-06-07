@@ -3,7 +3,7 @@ import React from "react";
 
 type TextareaProps = {
   placeholder: string;
-  value: string;
+  value: any;
   handleChangeText: (e: string) => void;
   otherStyles?: string;
 };

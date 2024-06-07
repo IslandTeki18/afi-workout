@@ -4,7 +4,7 @@ import { FontAwesome6 } from "@expo/vector-icons";
 
 type InputProps = {
   placeholder: string;
-  value: string;
+  value: any;
   handleChangeText: (e: string) => void;
   otherStyles?: string;
   keyboardType?:
