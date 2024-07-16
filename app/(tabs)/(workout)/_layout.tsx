@@ -45,6 +45,14 @@ const WorkoutLayout = () => {
         }}
         
       />
+      <Stack.Screen 
+        name="review-workout"
+        options={{
+          title: "Review Workout",
+          headerTitle: "",
+          headerBackTitle: "Back",
+        }}
+      />
     </Stack>
   );
 };

@@ -1,7 +1,4 @@
-import {
-  View,
-  Text,
-} from "react-native";
+import { View, Text } from "react-native";
 import React, { useState } from "react";
 import {
   Input,
@@ -21,7 +18,13 @@ const fakeList = [
 const CreatePage = () => {
   const [workoutName, setWorkoutName] = useState<string>("");
   const [workoutType, setWorkoutType] = useState<string>("");
+  const [workoutExercises, setWorkoutExercises] = useState([]);
 
+
+  function isReviewBtnDisabled() {
+    return workoutName === "" || workoutType === "" || workoutExercises.length === 0;
+  }
+  
   return (
     <View className="h-full bg-white">
       <View className="px-6 z-10 pb-4">
@@ -51,10 +54,9 @@ const CreatePage = () => {
       </View>
       <View className="px-6 py-3">
         <PrimaryButton
-          disabled
           title="Review Workout"
           size="large"
-          handlePress={() => {}}
+          handlePress={() => router.push("/review-workout")}
         />
       </View>
     </View>

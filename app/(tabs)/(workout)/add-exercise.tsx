@@ -18,8 +18,8 @@ const AddExercise = () => {
   const [formObj, setFormObj] = useState<ExerciseForm>({} as ExerciseForm);
 
   return (
-    <SafeAreaView className="bg-white h-full">
-      <Text className="text-lgTitle font-semibold mb-6 px-6">
+    <View className="bg-white h-full">
+      <Text className="text-lgTitle font-semibold py-6 px-6">
         Create New Exercise
       </Text>
       <View className="px-6 pb-4">
@@ -75,11 +75,11 @@ const AddExercise = () => {
       <View className="px-6 pb-4">
         <PrimaryButton
           title="Create Exercise"
-          handlePress={() => router.push("/create-workout")}
+          handlePress={() => router.back()}
           size="large"
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
